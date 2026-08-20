@@ -28,9 +28,8 @@ if st.button("Ask"):
 
     if os.path.exists(FAISS_PATH):
         vector_store = FAISS.load_local(FAISS_PATH, embeddings, allow_dangerous_deserialization=True)
-        st.info("Loaded existing embeddings from disk — no API call made.")
     else:
-        with st.spinner("Fetching transcript and creating embeddings (first time for this video)..."):
+        with st.spinner("Fetching..."):
             try:
                 fetched_transcript = YouTubeTranscriptApi().fetch(video_id, languages=['en'])
                 transcript_list = fetched_transcript.to_raw_data()
