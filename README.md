@@ -15,3 +15,16 @@ The application follows these steps:
 5. Relevant chunks are retrieved using similarity search.
 6. The retrieved context is passed to Gemini.
 7. Gemini generates the answer.
+
+## Demo
+
+![YouTube RAG Bot UI](demo.png)
+
+
+## Usage
+
+1. Enter a **YouTube Video ID** (not the full URL) 
+2. Type your **question** in the second input box.
+3. Click **Ask**.
+
+> ⚠️ Note: The bot answers *only* using that specific video.
